@@ -1,4 +1,101 @@
 //====================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 50;
+	left: 0;
+	top: 0;
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 129px;
+		background-color: rgba(0, 0, 0, .6);
+	}
+
+	&__menu {
+	}
+
+	&__logo {
+	}
+
+}
+
+.icon-menu {
+}
+
+.menu {
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&--left {
+			li {
+				padding-right: 65px;
+
+				&:after {
+					right: calc(65px / 2);
+				}
+
+				&:last-child:after {
+					display: none;
+				}
+
+			}
+		}
+
+		&--right {
+			li {
+				padding-left: 65px;
+
+				&:after {
+					left: calc(65px / 2);
+				}
+
+				&:first-child:after {
+					display: none;
+				}
+
+			}
+		}
+
+	}
+
+	&__icon {
+	}
+
+	&__list {
+		display: flex;
+
+		li {
+			font-size: 16px;
+			line-height: 60px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: #ffffff;
+			position: relative;
+
+			&:after {
+				content: '';
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background-color: #747771;
+				position: absolute;
+				top: 50%;
+			}
+		}
+
+	}
+
+	&__link {
+	}
+
+}
 
 //====================================================================================================
 
