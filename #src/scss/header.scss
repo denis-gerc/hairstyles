@@ -5,102 +5,89 @@
 	z-index: 50;
 	left: 0;
 	top: 0;
+	background-color: rgba(0, 0, 0, .6);
 
 	&__row {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 129px;
-		background-color: rgba(0, 0, 0, .6);
 	}
 
-	&__menu {
-	}
+	&__menu {}
 
-	&__logo {
-	}
+	&__logo {}
 
-}
 
-.icon-menu {
-}
+	.icon-menu {}
 
-.menu {
+	.menu {
 
-	&__body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		&__body {}
 
-		&--left {
+		&__icon {}
+
+		&__list {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
 			li {
-				padding-right: 65px;
+
+				padding: 0 35px;
+				color: #ffffff;
+				font-size: 16px;
+				line-height: 60px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				position: relative;
 
 				&:after {
-					right: calc(65px / 2);
+					content: '';
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: #747771;
+					position: absolute;
+					top: 50%;
+					right: 0;
 				}
 
-				&:last-child:after {
+				&:nth-child(3)::after {
+					display: none;
+				}
+
+				&:nth-child(4)::after {
+					display: none;
+				}
+
+				&:last-child::after {
 					display: none;
 				}
 
 			}
+
 		}
 
-		&--right {
-			li {
-				padding-left: 65px;
-
-				&:after {
-					left: calc(65px / 2);
-				}
-
-				&:first-child:after {
-					display: none;
-				}
-
-			}
-		}
+		// &__link {
+		// 	color: #ffffff;
+		// 	font-size: 16px;
+		// 	line-height: 60px;
+		// 	font-weight: 700;
+		// 	text-transform: uppercase;
+		// 	letter-spacing: 0.1em;
+		// }
 
 	}
 
-	&__icon {
-	}
+	//====================================================================================================
 
-	&__list {
-		display: flex;
 
-		li {
-			font-size: 16px;
-			line-height: 60px;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.1em;
-			color: #ffffff;
-			position: relative;
+	//Burger
 
-			&:after {
-				content: '';
-				width: 5px;
-				height: 5px;
-				border-radius: 50%;
-				background-color: #747771;
-				position: absolute;
-				top: 50%;
-			}
-		}
-
-	}
-
-	&__link {
-	}
-
-}
-
-//====================================================================================================
-
-/*
-//Burger
+	/*
 .icon-menu {
 	display: none;
 	@media (max-width: $md3+px) {
@@ -144,3 +131,5 @@
 	}
 }
 */
+
+}
