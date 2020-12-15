@@ -131,7 +131,6 @@ body._lock {
 
 .container {
   max-width: 1200px;
-  min-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -1028,7 +1027,7 @@ body.ie ._ibg img {
 }
 
 .header .menu__list li {
-  padding: 0 35px;
+  padding: calc(10px + 25 * ((100vw - 320px) / 1600));
   color: #ffffff;
   font-size: 16px;
   line-height: 60px;
@@ -1047,6 +1046,14 @@ body.ie ._ibg img {
   position: absolute;
   top: 50%;
   right: 0;
+}
+
+.header .menu__list li:first-child {
+  padding-left: 0;
+}
+
+.header .menu__list li:last-child {
+  padding-right: 0;
 }
 
 .header .menu__list li:nth-child(3)::after {

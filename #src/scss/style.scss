@@ -53,6 +53,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
+
 	&._loaded {}
 }
 
@@ -62,7 +63,6 @@ body {
 
 .container {
 	max-width: 1200px;
-	min-width: 320px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
