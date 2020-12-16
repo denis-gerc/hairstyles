@@ -12,11 +12,18 @@
 		justify-content: center;
 		align-items: center;
 		height: 129px;
+		//position: relative;
 	}
 
 	&__menu {}
 
-	&__logo {}
+	&__logo {
+		position: absolute;
+		left: 50%;
+		top: 30px;
+		transform: translateX(-50%);
+
+	}
 
 
 	.icon-menu {}
@@ -58,11 +65,15 @@
 					padding-right: 0;
 				}
 
-				&:nth-child(3)::after {
-					display: none;
+				&:nth-child(3) {
+					padding-right: 150px;
 				}
 
-				&:nth-child(4)::after {
+				&:nth-child(4) {
+					padding-left: 150px;
+				}
+
+				&:nth-child(3)::after {
 					display: none;
 				}
 

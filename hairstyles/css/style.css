@@ -1012,6 +1012,15 @@ body.ie ._ibg img {
   height: 129px;
 }
 
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .header .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1050,11 +1059,15 @@ body.ie ._ibg img {
   padding-right: 0;
 }
 
-.header .menu__list li:nth-child(3)::after {
-  display: none;
+.header .menu__list li:nth-child(3) {
+  padding-right: 150px;
 }
 
-.header .menu__list li:nth-child(4)::after {
+.header .menu__list li:nth-child(4) {
+  padding-left: 150px;
+}
+
+.header .menu__list li:nth-child(3)::after {
   display: none;
 }
 
