@@ -37,12 +37,6 @@
 
 				//padding: 0 35px;
 				@include adaptiv-value("padding", 35, 10, 0);
-				color: #ffffff;
-				font-size: 16px;
-				line-height: 60px;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
 				position: relative;
 
 				&:after {
@@ -80,14 +74,14 @@
 
 		}
 
-		// &__link {
-		// 	color: #ffffff;
-		// 	font-size: 16px;
-		// 	line-height: 60px;
-		// 	font-weight: 700;
-		// 	text-transform: uppercase;
-		// 	letter-spacing: 0.1em;
-		// }
+		 &__link {
+		 	color: #ffffff;
+		 	font-size: 16px;
+		 	line-height: 60px;
+		 	font-weight: 700;
+		 	text-transform: uppercase;
+		 	letter-spacing: 0.1em;
+		 }
 
 	}
 

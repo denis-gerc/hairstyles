@@ -1028,12 +1028,6 @@ body.ie ._ibg img {
 
 .header .menu__list li {
   padding: calc(10px + 25 * ((100vw - 320px) / 1600));
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 60px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   position: relative;
 }
 
@@ -1066,6 +1060,15 @@ body.ie ._ibg img {
 
 .header .menu__list li:last-child::after {
   display: none;
+}
+
+.header .menu__link {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .page {
