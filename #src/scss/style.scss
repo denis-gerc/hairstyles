@@ -47,12 +47,13 @@ body {
 
 //<ОБОЛОЧКА>============================================================================================================
 .wrapper {
-	width: 100%;
+	@include min-max(320px, 100%, 0);
+	// min-width: 320px;
+	// width: 100%;
 	min-height: 100%;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-
 
 	&._loaded {}
 }
@@ -62,9 +63,7 @@ body {
 //<ОСНОВНАЯ СЕТКА>======================================================================================================
 
 .container {
-	max-width: 1200px;
-	padding: 0 15px;
-	margin: 0 auto;
+	@include min-max(320px, 1200px, 0 15px);
 }
 
 //._container {
