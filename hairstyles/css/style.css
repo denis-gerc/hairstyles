@@ -971,7 +971,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 129px;
+  height: 130px;
 }
 
 .header__logo {
@@ -1070,8 +1070,8 @@ body.ie ._ibg img {
   letter-spacing: 0.1em;
   display: block;
   line-height: 130px;
-  margin-left: calc(16px + 30 * ((100vw - 320px)/ 1920));
-  margin-right: calc(16px + 30 * ((100vw - 320px)/ 1920));
+  margin-left: calc(16px + 30 * ((100vw - 320px) / 1920));
+  margin-right: calc(16px + 30 * ((100vw - 320px) / 1920));
 }
 
 .menu__link:before {
@@ -1189,14 +1189,6 @@ body._touch .sub-menu__list.open {
   display: block;
 }
 
-body._lock .arrow {
-  right: 20px;
-}
-
-body._lock .arrow.active {
-  top: 35px;
-}
-
 .icon-menu {
   display: none;
 }
@@ -1267,6 +1259,34 @@ p {
     background-image: none;
   }
 
+  .menu__list {
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+
+  body._lock .arrow {
+    right: 20px;
+  }
+
+  body._lock .arrow.active {
+    top: 35px;
+  }
+
+  body._lock .header__logo {
+    position: absolute;
+    top: 22px;
+    left: calc(50% - 26px);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    padding-top: 0;
+  }
+
+  body._lock .logo {
+    display: none;
+  }
+
   .menu__body._active {
     position: fixed;
     -webkit-box-orient: vertical;
@@ -1282,10 +1302,6 @@ p {
     top: 0;
     left: 0;
     overflow: auto;
-  }
-
-  .menu__body._active .header__logo {
-    padding-top: 22px;
   }
 
   .menu__body._active .menu__list {
@@ -1332,12 +1348,6 @@ p {
   .menu__body._active .menu__list .menu__link {
     font-size: 18px;
     line-height: 25px;
-  }
-
-  .menu__list {
-    -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-            transform: translateY(-100%);
   }
 
   .icon-menu {
@@ -1399,27 +1409,6 @@ p {
 
   .select__options {
     font-size: 18px;
-  }
-}
-
-@media (max-width: 424px) {
-  .header__logo {
-    left: 0;
-    -webkit-transform: translateX(15px);
-        -ms-transform: translateX(15px);
-            transform: translateX(15px);
-    min-width: 244px;
-  }
-}
-
-@media (max-width: 374px) {
-  .header__logo img {
-    max-width: 244px;
-    width: 100%;
-  }
-
-  .header .menu__body._active .header__logo {
-    padding-top: 26px;
   }
 }
 
