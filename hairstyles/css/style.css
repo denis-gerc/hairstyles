@@ -976,7 +976,7 @@ body.ie ._ibg img {
 
 .header__logo {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 26px);
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -1007,8 +1007,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  width: 100%;
 }
 
 .menu__list {
@@ -1018,47 +1017,49 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.menu__list--left {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.menu__list--left > li:first-child {
-  padding-left: 0;
-}
-
-.menu__list--right {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.menu__list--right > li:last-child {
-  padding-right: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .menu__list > li {
-  margin-left: calc(10px + 25 * ((100vw - 320px)/ 1920));
-  margin-right: calc(10px + 25 * ((100vw - 320px)/ 1920));
   position: relative;
 }
 
 .menu__list > li::before {
-  content: '';
+  content: "";
   position: absolute;
+  top: 50%;
+  left: -2px;
+  margin-top: -3px;
   width: 5px;
   height: 5px;
-  border-radius: 50%;
+  border-radius: 5px;
   background-color: #747771;
-  top: 50%;
-  left: -50%;
 }
 
 .menu__list > li:first-child::before {
   display: none;
+}
+
+.menu__list > li:first-child > a {
+  margin-left: 0;
+}
+
+.menu__list > li:last-child > a {
+  margin-right: 0;
+}
+
+.menu__list > li:nth-child(5)::before {
+  display: none;
+}
+
+.menu__list .logo {
+  visibility: hidden;
+  width: 270px;
+  height: 85px;
 }
 
 .menu__link {
@@ -1069,6 +1070,8 @@ body.ie ._ibg img {
   letter-spacing: 0.1em;
   display: block;
   line-height: 130px;
+  margin-left: calc(16px + 30 * ((100vw - 320px)/ 1920));
+  margin-right: calc(16px + 30 * ((100vw - 320px)/ 1920));
 }
 
 .menu__link:before {
@@ -1096,14 +1099,10 @@ body.ie ._ibg img {
   opacity: 1;
 }
 
-.menu__link.parent {
-  margin-right: 5px;
-}
-
 .arrow {
   display: none;
   position: absolute;
-  right: -15px;
+  right: 10px;
   top: 50%;
   width: 0;
   height: 0;
@@ -1306,10 +1305,6 @@ p {
         -ms-transform: translateY(130px);
             transform: translateY(130px);
     width: 100%;
-  }
-
-  .menu__body._active .menu__list--left li:first-child::after {
-    display: none;
   }
 
   .menu__body._active .menu__list > li {

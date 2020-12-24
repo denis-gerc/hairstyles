@@ -1,4 +1,4 @@
-//====================================================================================================
+//===========================================
 .header {
 	position: absolute;
 	width: 100%;
@@ -14,7 +14,7 @@
 
 	&__logo {
 		position: absolute;
-		left: 50%;
+		left: calc(50% - 26px);
 		top: 50%;
 		transform: translate(-50%, -50%);
 	}
@@ -31,58 +31,53 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		flex-basis: 100%;
+		width: 100%;
 	}
 
 	&__list {
 		display: flex;
 		align-items: center;
-		// flex-wrap: wrap;
-		// flex: 0 1 calc(50% - 135px);
-
-
-		&--left {
-			justify-content: flex-end;
-
-			&>li:first-child {
-				padding-left: 0;
-			}
-		}
-
-		&--right {
-			justify-content: flex-start;
-
-			&>li:last-child {
-				padding-right: 0;
-			}
-		}
+		justify-content: center;
+		margin: 0 auto;
+		width: 100%;
 
 		&>li {
-			margin-left: calc(10px + 25 * ((100vw - 320px)/ 1920));
-			margin-right: calc(10px + 25 * ((100vw - 320px)/ 1920));
-			// @include adaptiv-value("padding-left", 35, 10, 0);
-			// @include adaptiv-value("padding-right", 35, 10, 0);
 			position: relative;
 
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
+				top: 50%;
+				left: -2px;
+				margin-top: -3px;
 				width: 5px;
 				height: 5px;
-				border-radius: 50%;
+				border-radius: 5px;
 				background-color: #747771;
-				top: 50%;
-				left: -50%;
 			}
 
 			&:first-child::before {
 				display: none;
 			}
 
-			// &:hover .sub-menu__list {
-			// 	display: block;
-			// }
+			&:first-child>a {
+				margin-left: 0;
+			}
 
+			&:last-child>a {
+				margin-right: 0;
+			}
+
+			&:nth-child(5)::before {
+				display: none;
+			}
+
+		}
+
+		.logo {
+			visibility: hidden;
+			width: 270px;
+			height: 85px;
 		}
 
 	}
@@ -95,6 +90,8 @@
 		letter-spacing: 0.1em;
 		display: block;
 		line-height: 130px;
+		margin-left: calc(16px + 30 * ((100vw - 320px)/ 1920));
+		margin-right: calc(16px + 30 * ((100vw - 320px)/ 1920));
 
 		&:before {
 			content: "";
@@ -115,10 +112,6 @@
 			opacity: 1;
 		}
 
-		&.parent {
-			margin-right: 5px;
-		}
-
 	}
 
 }
@@ -126,7 +119,7 @@
 .arrow {
 	display: none;
 	position: absolute;
-	right: -15px;
+	right: 10px;
 	top: 50%;
 	width: 0;
 	height: 0;
@@ -177,14 +170,6 @@ body._touch .arrow {
 				align-items: center;
 				transform: translateY(130px);
 				width: 100%;
-
-				&--left {
-					li:first-child::after {
-						display: none;
-					}
-				}
-
-				&--right {}
 
 				&>li {
 					font-size: 25px;
