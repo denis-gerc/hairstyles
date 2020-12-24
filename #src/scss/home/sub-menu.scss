@@ -7,7 +7,6 @@
 		padding-top: 30px;
 		min-width: 172px;
 
-
 		li {
 			// line-height: 72px;
 			background-color: white;
@@ -61,4 +60,24 @@
 
 	}
 
+}
+
+body.mouse .menu li:hover .sub-menu__list {
+	display: block;
+}
+
+body._touch .sub-menu__list.open {
+	display: block;
+}
+
+@media(max-width: 1023px) {
+	body._touch .sub-menu__list.open {
+		position: relative;
+		left: 0;
+		top: 0;
+
+		li:last-child {
+			background-image: none;
+		}
+	}
 }

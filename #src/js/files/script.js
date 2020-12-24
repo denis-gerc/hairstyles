@@ -11,7 +11,7 @@ $(document).ready(function () {
 	// });
 
 	// Mobile menu and sub-menu and sub-sub-menu
-
+	//===============================================
 	let isMobile = {
 
 		Android: function () {
@@ -54,6 +54,7 @@ $(document).ready(function () {
 		body.classList.add('mouse');
 	}
 
+	//==========================
 	//Slick Slider
 
 	// $('.slider').slick({
@@ -82,23 +83,24 @@ $(document).ready(function () {
 	// 		]
 	// });
 
-	// Animates the header upon scroll
+	//===============================
+	//Animates the header upon scroll
 
-	$(function () {
-		let header = $(".header"),
-			yOffset = 0,
-			triggerPoint = 150;
-		$(window).scroll(function () {
-			yOffset = $(window).scrollTop();
+	// $(function () {
+	// 	let header = $(".header"),
+	// 		yOffset = 0,
+	// 		triggerPoint = 150;
+	// 	$(window).scroll(function () {
+	// 		yOffset = $(window).scrollTop();
 
-			if (yOffset >= triggerPoint) {
-				header.addClass("minimized");
-			} else {
-				header.removeClass("minimized");
-			}
+	// 		if (yOffset >= triggerPoint) {
+	// 			header.addClass("minimized");
+	// 		} else {
+	// 			header.removeClass("minimized");
+	// 		}
 
-		});
-	});
-
+	// 	});
+	// });
+	//==========================================
 
 }); // end document
