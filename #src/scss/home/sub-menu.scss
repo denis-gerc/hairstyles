@@ -4,11 +4,11 @@
 		display: none;
 		position: absolute;
 		top: 70px;
+		left: 40px;
 		padding-top: 30px;
 		min-width: 172px;
 
 		li {
-			// line-height: 72px;
 			background-color: white;
 			padding: 30px;
 			position: relative;
@@ -71,13 +71,16 @@ body._touch .sub-menu__list.open {
 }
 
 @media(max-width: 1023px) {
+
 	body._touch .sub-menu__list.open {
 		position: relative;
 		left: 0;
-		top: 0;
+		top: -25px;
+		padding: 0;
 
 		li:last-child {
 			background-image: none;
 		}
+
 	}
 }
