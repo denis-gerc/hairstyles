@@ -75,3 +75,19 @@
 		#{$indentType}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
+
+//Разделитель точки
+@mixin hr-dots($top: 50%, $right: 30px, $left: 30px,  $height: 2px, $bg-size: 16px 16px, $bg-pos: center, $bg-img-r: $height/2) {
+	content: "";
+	position: absolute;
+	top: $top;
+	right: $right;
+	left: $left;
+	height: $height;
+	background-image: -webkit-repeating-radial-gradient(center center, #eaeaea, #eaeaea $bg-img-r, transparent $bg-img-r, transparent 100%);
+	background-image: -o-repeating-radial-gradient(center center, #eaeaea, #eaeaea $bg-img-r, transparent $bg-img-r, transparent 100%);
+	background-image: repeating-radial-gradient(center center, #eaeaea, #eaeaea $bg-img-r, transparent $bg-img-r, transparent 100%);
+	background-size: $bg-size;
+	background-position: $bg-pos;
+	@content;
+}

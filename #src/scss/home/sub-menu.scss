@@ -4,7 +4,7 @@
 		display: none;
 		position: absolute;
 		top: 70px;
-		left: 40px;
+		@include adaptiv-value("left", 40, 20, 1920);
 		padding-top: 30px;
 		min-width: 172px;
 
@@ -24,16 +24,7 @@
 	&__item {
 
 		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 30px;
-			right: 30px;
-			height: 2px;
-			background-image: -webkit-repeating-radial-gradient(center center, #eaeaea, #eaeaea 1px, transparent 1px, transparent 100%);
-			background-image: repeating-radial-gradient(center center, #eaeaea, #eaeaea 1px, transparent 1px, transparent 100%);
-			background-size: 8px 8px;
-			background-position: center;
+			@include hr-dots($top: 0, $height: 2px, $bg-size: 8px 8px);
 		}
 
 		&:first-child::before {
@@ -54,7 +45,7 @@
 
 		&:hover,
 		&:active {
-			color: #d02954;
+			color: $color-accent;
 			background: url("../../img/icons/menu-icon-active.png") center left no-repeat white;
 		}
 
