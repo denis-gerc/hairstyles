@@ -1,0 +1,270 @@
+// menu
+.header {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, .6);
+
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+	}
+
+	&__logo {
+		position: absolute;
+		left: calc(50% - 26px);
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	flex-basis: 100%;
+	align-items: center;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		&>li {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: -2px;
+				margin-top: -3px;
+				width: 5px;
+				height: 5px;
+				border-radius: 5px;
+				background-color: #747771;
+			}
+
+			&:first-child::before {
+				display: none;
+			}
+
+			&:first-child>a {
+				margin-left: 0;
+
+				&:before {
+					width: calc(100% - (calc(16px + 30 * ((100vw - 320px) / 1920))));
+					margin-left: 0;
+				}
+			}
+
+			&:last-child>a {
+				margin-right: 0;
+
+				&:before {
+					width: calc(100% - (calc(16px + 30 * ((100vw - 320px) / 1920))));
+					margin-right: 0;
+				}
+			}
+
+			&:nth-child(5)::before {
+				display: none;
+			}
+
+		}
+
+		.logo {
+			visibility: hidden;
+			width: 270px;
+			height: 85px;
+		}
+
+	}
+
+	&__link {
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: block;
+		line-height: 130px;
+		@include adaptiv-value("margin-left", 41, 16, 0);
+		@include adaptiv-value("margin-right", 41, 16, 0);
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 3px;
+			transform: scale(0);
+			background-color: white;
+			opacity: 0;
+			transition: all 0.2s ease 0s;
+			width: calc(100% - 2*(calc(16px + 30 * ((100vw - 320px) / 1920))));
+			margin: 0 auto;
+		}
+
+		&:hover::before {
+			top: 0;
+			transform: scale(1);
+			opacity: 1;
+		}
+
+	}
+
+}
+
+.arrow {
+	display: none;
+	position: absolute;
+	right: 4px;
+	top: calc(50% - 4px);
+	width: 10px;
+	height: 10px;
+	margin: -3px 10px 3px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+}
+
+body._touch .arrow {
+	display: block;
+}
+
+.arrow.active {
+	transform: rotate(-135deg);
+	top: 50%;
+}
+
+
+@media (max-width: 1023px) {
+
+	.menu__list {
+		transform: translateY(-100%);
+	}
+
+	.header__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	body._lock {
+
+		.arrow {
+			right: 20px;
+			top: 10px;
+
+			&.active {
+				top: 15px;
+			}
+		}
+
+		.logo {
+			display: none;
+		}
+
+	}
+
+	.menu__body._active {
+		position: fixed;
+		flex-direction: column;
+		justify-content: flex-start;
+		background-color: #111111;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: auto;
+
+		.header__logo {
+			top: 22px;
+			transform: translateX(-50%);
+		}
+
+		.menu__list {
+			flex-direction: column;
+			transform: translateY(150px);
+
+			&>li {
+				font-size: 25px;
+				text-align: center;
+				width: 100%;
+
+				&:before {
+					display: none;
+				}
+
+				&:last-child .menu__link::after {
+					display: none;
+				}
+
+			}
+
+			&>li .sub-menu__list>li {
+				text-align: left;
+			}
+
+			.menu__link {
+				font-size: 18px;
+				line-height: 25px;
+
+				&:first-child {
+					margin: 0;
+				}
+
+				&:after {
+					content: '';
+					display: block;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: #747771;
+					margin: 20px auto;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width: 424px) {
+	.header__logo {
+		display: block;
+		left: 15px;
+		transform: translateY(-50%);
+
+		.logo-img {
+			width: 246px;
+		}
+	}
+
+	.menu__body._active {
+		.header__logo {
+			display: block;
+			left: 15px;
+			top: 26px;
+			transform: translateY(0);
+		}
+	}
+}

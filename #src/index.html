@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.min.css">
-
-  <title>Title</title>
-</head>
+@@include('pages/_head.html', {'title': 'Makeup & Hairstyle'})
 <body>
-@@include('pages/_header.html')
-<div class="main">
-<div id="map"></div>
+
+<div class="wrapper">
+  <main class="page">
+    @@include('pages/_header.html')
+    @@include('pages/home/fullscreen.html')
+    @@include('pages/home/about-me.html')
+
+
+
+    @@include('pages/_footer.html')
+  </main>
 </div>
 
 @@include('pages/_js.html')
