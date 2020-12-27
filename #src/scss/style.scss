@@ -37,7 +37,7 @@ $color-accent: #d02954;
 @import "null";
 
 body {
-	color: #000;
+	color: #f0f0f0;
 	font-size: 14px;
 
 	&._lock {
@@ -96,10 +96,8 @@ body {
 //@import "pagging";
 @import "popup";
 @import "header";
-@import "footer";
 @import "home";
-@import "home/fullscreen";
-@import "home/about-me";
+@import "footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================
 
 //<ОСНОВНОЙ БЛОК>====================================================
