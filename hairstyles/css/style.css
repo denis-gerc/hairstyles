@@ -1278,7 +1278,7 @@ body._touch .sub-menu__list.open {
 }
 
 .about-me {
-  z-index: 2;
+  background: #f0f0f0;
 }
 
 .page__about-me {
@@ -1292,25 +1292,26 @@ body._touch .sub-menu__list.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
+  position: relative;
   padding: calc(30px + 30 * ((100vw - 320px) / 1600));
+  z-index: 2;
 }
 
-._no-webp .about-me__media{
-  background: url("../../img/bg/side_bg_1.jpg") left top/contain no-repeat; }
+.about-me__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48.6%;
+          flex: 0 1 48.6%;
+}
+
+.about-me__column--b {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 51%;
+          flex: 0 1 51%;
+}
 
 .about-me__media {
-  padding: 0 0 66.67% 0;
-  width: 48.57%;
-  max-height: 700px;
   height: 100%;
+  width: 100%;
 }
 
 .about-me__img {
@@ -1320,9 +1321,7 @@ body._touch .sub-menu__list.open {
 }
 
 .about-me__content {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding-left: 30px;
+  padding: 0 0 0 60px;
 }
 
 .about-me__title-h2 {
@@ -1332,6 +1331,7 @@ body._touch .sub-menu__list.open {
   text-transform: uppercase;
   color: #8cb877;
   padding-bottom: calc(20px + 40 * ((100vw - 320px) / 1600));
+  padding-top: calc(10px + 20 * ((100vw - 320px) / 1600));
 }
 
 .about-me__intro {
@@ -1343,7 +1343,7 @@ body._touch .sub-menu__list.open {
   color: #232323;
   position: relative;
   padding: 20px 0;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about-me__intro:before {
@@ -1385,7 +1385,7 @@ body._touch .sub-menu__list.open {
 .about-me__title-h4 {
   color: #d02954;
   font-weight: 400;
-  font-size: 45px;
+  font-size: calc(35px + 10 * ((100vw - 320px) / 1600));
   padding-top: 25px;
 }
 
@@ -1578,10 +1578,6 @@ p {
 @media (max-width: 1170px) {
   .about-me__title-h2 {
     font-size: calc(40px + 30 * ((100vw - 320px) / 850));
-  }
-
-  .about-me__title-h4 {
-    font-size: calc(35px + 10 * ((100vw - 320px) / 850));
   }
 
   .services__title {
@@ -1849,8 +1845,6 @@ p {
 ._webp .sub-menu__link:hover, ._webp .sub-menu__link:active{ background: url(../../img/icons/menu-icon-active.webp) center left no-repeat white; }
 
 ._webp .about-me__row{ background: url(../../img/bg/side_bg_1.webp) left top/contain no-repeat white; }
-
-._webp .about-me__media{ background: url(../../img/bg/side_bg_1.webp) left top/contain no-repeat; }
 
 ._webp .services__body--left{ background: url(../../img/texture/texture_color_4.webp) center/cover no-repeat; }
 
