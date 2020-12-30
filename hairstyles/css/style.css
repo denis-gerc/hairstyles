@@ -1278,9 +1278,11 @@ body._touch .sub-menu__list.open {
 }
 
 .about-me {
-  width: 100%;
-  height: 100%;
   z-index: 2;
+}
+
+.page__about-me {
+  padding-bottom: 45px;
 }
 
 ._no-webp .about-me__row{
@@ -1396,6 +1398,133 @@ body._touch .sub-menu__list.open {
   color: #499cbb;
 }
 
+.services {
+  background: #f0f0f0;
+}
+
+.page__services {
+  padding: 45px 0 45px;
+}
+
+.services__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+  margin: 0 15px;
+}
+
+.services__item--left {
+  margin-left: 0;
+}
+
+.services__item--right {
+  margin-right: 0;
+}
+
+.services__header {
+  padding: 0 0 66.5% 0;
+}
+
+.services__body {
+  padding: calc(20px + 30 * ((100vw - 320px) / 1600));
+  text-align: center;
+  height: 100%;
+}
+
+._no-webp .services__body--left{
+  background: url("../../img/texture/texture_color_4.jpg") center/cover no-repeat; }
+
+._no-webp .services__body--center{
+  background: url("../../img/texture/texture_color_2.jpg") center/cover no-repeat; }
+
+._no-webp .services__body--right{
+  background: url("../../img/texture/texture_color_3.jpg") center/cover no-repeat; }
+
+._no-webp .services__divider{
+  background-image: url("../../img/icons/icon-divider.png"); }
+
+.services__divider {
+  width: 75px;
+  height: 18px;
+  background-color: transparent;
+  margin: 15px auto;
+  border: none;
+}
+
+.services__title {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.services__text {
+  opacity: 0.74;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.services__footer {
+  padding: 20px 55px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services__footer--left {
+  -webkit-box-shadow: 0 5px 0 #53963e;
+          box-shadow: 0 5px 0 #53963e;
+}
+
+.services__footer--left a {
+  color: #53963e;
+}
+
+.services__footer--center {
+  -webkit-box-shadow: 0 5px 0 #7f3c6c;
+          box-shadow: 0 5px 0 #7f3c6c;
+}
+
+.services__footer--center a {
+  color: #7f3c6c;
+}
+
+.services__footer--right {
+  -webkit-box-shadow: 0 5px 0 #3394b6;
+          box-shadow: 0 5px 0 #3394b6;
+}
+
+.services__footer--right a {
+  color: #3394b6;
+}
+
+.services__link {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services__link:hover {
+  opacity: .7;
+}
+
 .page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1449,6 +1578,14 @@ p {
 @media (max-width: 1170px) {
   .about-me__title-h2 {
     font-size: calc(40px + 30 * ((100vw - 320px) / 850));
+  }
+
+  .about-me__title-h4 {
+    font-size: calc(35px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .services__title {
+    font-size: calc(30px + 5 * ((100vw - 320px) / 850));
   }
 }
 
@@ -1646,6 +1783,23 @@ p {
   .about-me__img {
     border: 20px solid #f9f9f9;
   }
+
+  .services__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .services__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 0 0 30px 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1655,6 +1809,13 @@ p {
 
   .select__options {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -1690,3 +1851,11 @@ p {
 ._webp .about-me__row{ background: url(../../img/bg/side_bg_1.webp) left top/contain no-repeat white; }
 
 ._webp .about-me__media{ background: url(../../img/bg/side_bg_1.webp) left top/contain no-repeat; }
+
+._webp .services__body--left{ background: url(../../img/texture/texture_color_4.webp) center/cover no-repeat; }
+
+._webp .services__body--center{ background: url(../../img/texture/texture_color_2.webp) center/cover no-repeat; }
+
+._webp .services__body--right{ background: url(../../img/texture/texture_color_3.webp) center/cover no-repeat; }
+
+._webp .services__divider{ background-image: url(../../img/icons/icon-divider.webp); }
