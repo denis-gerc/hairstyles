@@ -11,4 +11,3 @@ uploads/*
 .vscode/
 node_modules/
 package-lock.json
-/hairstyles
