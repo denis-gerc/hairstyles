@@ -1179,7 +1179,7 @@ body._touch .arrow {
 }
 
 ._no-webp .sub-menu__link{
-  background: url("../../img/icons/menu-icon.png") center left no-repeat #fff; }
+  background: url("../img/icons/menu-icon.png") center left no-repeat #fff; }
 
 .sub-menu__link {
   display: inline-block;
@@ -1192,7 +1192,7 @@ body._touch .arrow {
 }
 
 ._no-webp .sub-menu__link:hover, ._no-webp .sub-menu__link:active{
-  background: url("../../img/icons/menu-icon-active.png") center left no-repeat white; }
+  background: url("../img/icons/menu-icon-active.png") center left no-repeat white; }
 
 .sub-menu__link:hover,
 .sub-menu__link:active {
@@ -1850,9 +1850,9 @@ p {
 
 ._webp .sub-menu__list li:last-child{ background: url(../../img/icons/menu-flowers-bg.webp) center bottom/100% no-repeat white; }
 
-._webp .sub-menu__link{ background: url(../../img/icons/menu-icon.webp) center left no-repeat #fff; }
+._webp .sub-menu__link{ background: url(../img/icons/menu-icon.webp) center left no-repeat #fff; }
 
-._webp .sub-menu__link:hover, ._webp .sub-menu__link:active{ background: url(../../img/icons/menu-icon-active.webp) center left no-repeat white; }
+._webp .sub-menu__link:hover, ._webp .sub-menu__link:active{ background: url(../img/icons/menu-icon-active.webp) center left no-repeat white; }
 
 ._webp .about-me__row{ background: url(../img/bg/side_bg_1.webp) left top/contain no-repeat white; }
 

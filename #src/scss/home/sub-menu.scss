@@ -42,12 +42,12 @@
 		letter-spacing: 0.1em;
 		color: #232323;
 		padding-left: 25px;
-		background: url("../../img/icons/menu-icon.png") center left no-repeat #fff;
+		background: url("../img/icons/menu-icon.png") center left no-repeat #fff;
 
 		&:hover,
 		&:active {
 			color: $color-accent;
-			background: url("../../img/icons/menu-icon-active.png") center left no-repeat white;
+			background: url("../img/icons/menu-icon-active.png") center left no-repeat white;
 		}
 
 	}
