@@ -9,7 +9,7 @@
 	&__row {
 		display: flex;
 		position: relative;
-		background: url("../../img/bg/side_bg_1.jpg") left top / contain no-repeat white;
+		background: url("../img/bg/side_bg_1.jpg") left top / contain no-repeat white;
 		@include adaptiv-value("padding", 60, 30, 0);
 		z-index: 2;
 	}

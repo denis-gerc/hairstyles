@@ -36,15 +36,15 @@
 		height: 100%;
 
 		&--left {
-			background: url("../../img/texture/texture_color_4.jpg") center / cover no-repeat;
+			background: url("../img/texture/texture_color_4.jpg") center / cover no-repeat;
 		}
 
 		&--center {
-			background: url("../../img/texture/texture_color_2.jpg") center / cover no-repeat;
+			background: url("../img/texture/texture_color_2.jpg") center / cover no-repeat;
 		}
 
 		&--right {
-			background: url("../../img/texture/texture_color_3.jpg") center / cover no-repeat;
+			background: url("../img/texture/texture_color_3.jpg") center / cover no-repeat;
 		}
 
 	}
@@ -52,7 +52,7 @@
 	&__divider {
 		width: 75px;
 		height: 18px;
-		background-image: url("../../img/icons/icon-divider.png");
+		background-image: url("../img/icons/icon-divider.png");
 		background-color: transparent;
 		margin: 15px auto;
 		border: none;

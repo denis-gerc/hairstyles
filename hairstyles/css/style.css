@@ -1286,7 +1286,7 @@ body._touch .sub-menu__list.open {
 }
 
 ._no-webp .about-me__row{
-  background: url("../../img/bg/side_bg_1.jpg") left top/contain no-repeat white; }
+  background: url("../img/bg/side_bg_1.jpg") left top/contain no-repeat white; }
 
 .about-me__row {
   display: -webkit-box;
@@ -1447,16 +1447,16 @@ body._touch .sub-menu__list.open {
 }
 
 ._no-webp .services__body--left{
-  background: url("../../img/texture/texture_color_4.jpg") center/cover no-repeat; }
+  background: url("../img/texture/texture_color_4.jpg") center/cover no-repeat; }
 
 ._no-webp .services__body--center{
-  background: url("../../img/texture/texture_color_2.jpg") center/cover no-repeat; }
+  background: url("../img/texture/texture_color_2.jpg") center/cover no-repeat; }
 
 ._no-webp .services__body--right{
-  background: url("../../img/texture/texture_color_3.jpg") center/cover no-repeat; }
+  background: url("../img/texture/texture_color_3.jpg") center/cover no-repeat; }
 
 ._no-webp .services__divider{
-  background-image: url("../../img/icons/icon-divider.png"); }
+  background-image: url("../img/icons/icon-divider.png"); }
 
 .services__divider {
   width: 75px;
@@ -1854,12 +1854,12 @@ p {
 
 ._webp .sub-menu__link:hover, ._webp .sub-menu__link:active{ background: url(../../img/icons/menu-icon-active.webp) center left no-repeat white; }
 
-._webp .about-me__row{ background: url(../../img/bg/side_bg_1.webp) left top/contain no-repeat white; }
+._webp .about-me__row{ background: url(../img/bg/side_bg_1.webp) left top/contain no-repeat white; }
 
-._webp .services__body--left{ background: url(../../img/texture/texture_color_4.webp) center/cover no-repeat; }
+._webp .services__body--left{ background: url(../img/texture/texture_color_4.webp) center/cover no-repeat; }
 
-._webp .services__body--center{ background: url(../../img/texture/texture_color_2.webp) center/cover no-repeat; }
+._webp .services__body--center{ background: url(../img/texture/texture_color_2.webp) center/cover no-repeat; }
 
-._webp .services__body--right{ background: url(../../img/texture/texture_color_3.webp) center/cover no-repeat; }
+._webp .services__body--right{ background: url(../img/texture/texture_color_3.webp) center/cover no-repeat; }
 
-._webp .services__divider{ background-image: url(../../img/icons/icon-divider.webp); }
+._webp .services__divider{ background-image: url(../img/icons/icon-divider.webp); }
