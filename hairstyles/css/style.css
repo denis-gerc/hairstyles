@@ -1154,7 +1154,7 @@ body._touch .arrow {
 }
 
 ._no-webp .sub-menu__list li:last-child{
-  background: url("../../img/icons/menu-flowers-bg.png") center bottom/100% no-repeat white; }
+  background: url("../img/icons/menu-flowers-bg.png") center bottom/100% no-repeat white; }
 
 .sub-menu__list li:last-child {
   padding-bottom: 45px;
@@ -1848,7 +1848,7 @@ p {
   }
 }
 
-._webp .sub-menu__list li:last-child{ background: url(../../img/icons/menu-flowers-bg.webp) center bottom/100% no-repeat white; }
+._webp .sub-menu__list li:last-child{ background: url(../img/icons/menu-flowers-bg.webp) center bottom/100% no-repeat white; }
 
 ._webp .sub-menu__link{ background: url(../img/icons/menu-icon.webp) center left no-repeat #fff; }
 
