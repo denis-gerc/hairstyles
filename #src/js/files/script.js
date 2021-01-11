@@ -102,5 +102,43 @@ $(document).ready(function () {
 	// 	});
 	// });
 	//==========================================
+	// Swiper slide
+
+	// Инициализируем Swiper
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 5,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+	});
+
+	var galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 100,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		}
+	});
+
+	var galleryRight = new Swiper('.gallery-right', {
+		spaceBetween: 100,
+		slidesPerView: 1,
+		// navigation: {
+		// 	nextEl: '.swiper-button-next',
+		// 	prevEl: '.swiper-button-prev',
+		// },
+		// thumbs: {
+		// 	swiper: galleryThumbs
+		// }
+	});
+
+	// Передача управления
+	galleryTop.controller.control = galleryRight;
+	galleryRight.controller.control = galleryTop;
 
 }); // end document
