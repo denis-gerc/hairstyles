@@ -109,7 +109,7 @@ $(document).ready(function () {
 
 	// Инициализируем Swiper
 	var galleryThumbs = new Swiper('.gallery-thumbs', {
-		spaceBetween: 5,
+		spaceBetween: 30,
 		slidesPerView: 3,
 		freeMode: true,
 		watchSlidesVisibility: true,
@@ -117,7 +117,7 @@ $(document).ready(function () {
 	});
 
 	var galleryTop = new Swiper('.gallery-top', {
-		spaceBetween: 100,
+		spaceBetween: 1,
 		slidesPerView: 1,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -129,7 +129,7 @@ $(document).ready(function () {
 	});
 
 	var galleryRight = new Swiper('.gallery-right', {
-		spaceBetween: 100,
+		spaceBetween: 0,
 		slidesPerView: 1,
 		// navigation: {
 		// 	nextEl: '.swiper-button-next',
