@@ -1,0 +1,100 @@
+.reviews {
+  background: #f0f0f0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    background: url(../../img/bg/reviews_bg.jpg) right top/contain no-repeat
+      #fff;
+    padding: 90px 90px 90px 30px;
+  }
+}
+
+.page__reviews {
+  padding-top: 45px;
+}
+
+.container {
+}
+
+.reviews__column {
+  min-width: 0;
+  justify-content: space-between;
+
+  &--left {
+    flex-basis: 60%;
+    padding-right: 60px;
+  }
+  &--right {
+    flex-basis: 37%;
+  }
+}
+
+.text-slider {
+}
+
+.swiper-container {
+}
+
+.gallery-top {
+}
+
+.text-slider__wrapper {
+}
+
+.swiper-wrapper {
+}
+
+.text-slider__slide {
+}
+
+.swiper-slide {
+}
+
+.about-me__text {
+}
+
+.image-mini-slider {
+}
+
+.gallery-thumbs {
+  .swiper-slide {
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+.image-mini-slider__wrapper {
+  display: flex;
+}
+
+.image-mini-slider__slide {
+  // flex: 0 1 33.333%;
+}
+
+.image-mini-slider__image {
+  padding: 0px 0px 134% 0px;
+  cursor: pointer;
+}
+
+.reviews__column--right {
+}
+
+.image-slider {
+}
+
+.gallery-right {
+}
+
+.image-slider__wrapper {
+}
+
+.image-slider__slide {
+}
+
+.image-slider__image {
+}
