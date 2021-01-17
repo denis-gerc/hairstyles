@@ -1422,7 +1422,7 @@ body._touch .sub-menu__list.open {
 }
 
 ._no-webp .reviews__row{
-  background: url(../../img/bg/reviews_bg.jpg) right top/contain no-repeat #fff; }
+  background: url(../img/bg/reviews_bg.jpg) right top/contain no-repeat #fff; }
 
 .reviews__row {
   display: -webkit-box;
@@ -3013,4 +3013,4 @@ p {
 
 ._webp .services__divider{ background-image: url(../img/icons/icon-divider.webp); }
 
-._webp .reviews__row{ background: url(../../img/bg/reviews_bg.webp) right top/contain no-repeat #fff; }
+._webp .reviews__row{ background: url(../img/bg/reviews_bg.webp) right top/contain no-repeat #fff; }

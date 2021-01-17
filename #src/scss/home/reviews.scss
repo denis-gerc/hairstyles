@@ -8,7 +8,7 @@
 	&__row {
 		display: flex;
 		justify-content: space-between;
-		background: url(../../img/bg/reviews_bg.jpg) right top/contain no-repeat #fff;
+		background: url(../img/bg/reviews_bg.jpg) right top/contain no-repeat #fff;
 		padding: 90px 90px 90px 60px;
 		@include adaptiv-value("padding-right", 90, 20, 0);
 		@include adaptiv-value("padding-left", 60, 10, 0);
