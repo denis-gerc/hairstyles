@@ -10,7 +10,17 @@
 		justify-content: space-between;
 		background: url(../../img/bg/reviews_bg.jpg) right top/contain no-repeat #fff;
 		padding: 90px 90px 90px 60px;
+		@include adaptiv-value("padding-right", 90, 20, 0);
+		@include adaptiv-value("padding-left", 60, 10, 0);
 		align-items: center;
+
+		@media (min-width: 1920px) {
+			& {
+				@include adaptiv-value("padding-right", 90, 20, 1);
+				@include adaptiv-value("padding-left", 60, 10, 1);
+			}
+		}
+
 	}
 
 	&__column {
@@ -28,32 +38,17 @@
 
 }
 
-// ===== text-slider=====/
+//===== text-slider =====/
 .text-slider {
 	text-align: center;
-}
-
-.swiper-container {
-}
-
-.gallery-top {
-}
-
-.text-slider__wrapper {
-}
-
-.swiper-wrapper {
 }
 
 .text-slider__slide {
 	padding: 40px;
 }
 
-.swiper-slide {
-}
-
 .text-slider__text {
-	font-family: Mulish,sans-serif;
+	font-family: Mulish, sans-serif;
 	color: #232323;
 	font-size: 20px;
 	line-height: 40px;
@@ -78,7 +73,7 @@
 		position: absolute;
 		font-family: 'Playfair Display', serif;
 		bottom: 30px;
-		right: -20px;
+		right: -30px;
 		font-size: 70px;
 		font-style: normal;
 		color: #dfdfdf;
@@ -100,7 +95,7 @@
 	color: #499cbb;
 }
 
-// ===== image-mini-slider =====/
+//===== image-mini-slider =====/
 .image-mini-slider {
 	position: relative;
 	top: 10px;
@@ -119,36 +114,82 @@
 
 .image-mini-slider__slide {
 	max-width: 170px;
+	max-height: 227px;
 }
 
 .image-mini-slider__wrapper {
+	justify-content: center;
 }
 
 .image-mini-slider__image {
 	padding: 0 0 134% 0;
 	cursor: pointer;
-	max-width: 170px;
 }
 
-.reviews__column--right {
-}
-
-//==== slider before & after ===/
-.image-slider {
-}
-
-.image-slider__wrapper {
-}
-
-.image-slider__slide {
-}
-
+//==== slider before & after ====/
 .image-slider__image {
 	padding: 0 0 133% 0;
 }
 
-.gallery-right {
+@media (max-width: 1023px) {
+
+	.reviews {
+
+		&__row {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: calc(20px + 20 * ((100vw - 320px) / 703));
+			background-image: none !important;
+		}
+
+		&__column {
+
+			&--left {
+				order: 1;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+
+			&--right {
+				width: 100%;
+				order: -1;
+				margin-bottom: 50px;
+			}
+		}
+
+	}
+
+	.text-slider__slide {
+		padding: 0;
+	}
+
+	.image-mini-slider {
+		position: static;
+	}
+
+	.text-slider__slide {
+		padding-bottom: 40px;
+	}
+
+	.text-slider__text {
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 30px;
+		padding-bottom: calc(30px + 25 * ((100vw - 320px) / 703));
+
+		&:before, &:after {
+			display: none
+		}
+
+	}
+
 }
+
+
+
+
+
 
 
 

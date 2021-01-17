@@ -35,6 +35,12 @@
 		text-align: center;
 		height: 100%;
 
+		@media (min-width: 1920px) {
+			& {
+				@include adaptiv-value("padding", 50, 20, 1);
+			}
+		}
+
 		&--left {
 			background: url("../img/texture/texture_color_4.jpg") center / cover no-repeat;
 		}

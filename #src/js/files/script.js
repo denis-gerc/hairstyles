@@ -104,13 +104,28 @@ $(document).ready(function () {
     //==========================================
     // Swiper slide
 
-    // Инициализируем Swiper
+    // init Swiper
     let galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 30,
+        // spaceBetween: 30,
         slidesPerView: 3,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        // Responsive breakpoints
+        breakpoints: {
+            320: {
+                spaceBetween: 5,
+            },
+            768: {
+                spaceBetween: 20,
+            },
+            1024: {
+                spaceBetween: 10,
+            },
+            1140: {
+                spaceBetween: 30,
+            },
+        }
     });
 
     let galleryTop = new Swiper('.gallery-top', {
@@ -128,20 +143,16 @@ $(document).ready(function () {
     let galleryRight = new Swiper('.gallery-right', {
         spaceBetween: 0,
         slidesPerView: 1,
-        // navigation: {
-        // 	nextEl: '.swiper-button-next',
-        // 	prevEl: '.swiper-button-prev',
-        // },
-        // thumbs: {
-        // 	swiper: galleryThumbs
-        // }
+        simulateTouch: false,
+        // allowTouchMove: false,
+        touchRatio: 0,
     });
 
     // Передача управления
     galleryTop.controller.control = galleryRight;
     galleryRight.controller.control = galleryTop;
 
-    // twentytwenty (before and after)
+    // init twentytwenty (before and after)
     //==========================================
     $(function () {
         $(".twentytwenty-container").twentytwenty({
