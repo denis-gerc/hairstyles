@@ -3,9 +3,6 @@
   padding: 45px 0 45px;
 }
 
-.container {
-}
-
 .pricing {
   background: #f0f0f0;
 
@@ -19,28 +16,104 @@
     flex-direction: column;
     flex: 1 1 33.333%;
     margin: 0 15px;
-    background: #fff;
-    padding: 40px;
-    // max-width: 370px;
+    padding-bottom: 120px;
+    position: relative;
+
+    &:hover {
+      .pricing__small-text {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      .pricing__book {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      span {
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      opacity: 0.75;
+    }
 
     &:nth-of-type(1) {
       margin-left: 0;
+      background: url("../img/texture/texture_1.jpg") left bottom / contain
+        no-repeat #fff;
 
       .pricing__title {
         color: #669850;
+      }
+
+      &::after {
+        background: #669850;
+      }
+
+      .pricing__box {
+        background: url("../img/bg/still-life_3.png") no-repeat bottom right /
+          contain #fff;
+      }
+
+      .pricing__book::after {
+        background: rgba(75, 115, 57, 0.55);
+      }
+    }
+
+    &:nth-of-type(2) {
+      background: url("../img/texture/texture_2.jpg") left bottom / contain
+        no-repeat #fff;
+
+      .pricing__title {
+        color: #834272;
+      }
+
+      &::after {
+        background: #7f3c6c;
+      }
+
+      .pricing__box {
+        background: url("../img/bg/still-life_2.png") no-repeat bottom right /
+          contain #fff;
+      }
+
+      .pricing__book::after {
+        background: rgba(88, 39, 74, 0.55);
       }
     }
 
     &:nth-of-type(3) {
       margin-right: 0;
+      background: url("../img/texture/texture_3.jpg") left bottom / contain
+        no-repeat #fff;
 
       .pricing__title {
         color: #2f6686;
       }
-    }
 
-    &:nth-of-type(2) .pricing__title {
-      color: #834272;
+      &::after {
+        background: #2f6686;
+      }
+
+      .pricing__box {
+        background: url("../img/bg/still-life_1.png") no-repeat bottom right /
+          contain #fff;
+      }
+
+      .pricing__book::after {
+        background: rgba(30, 69, 91, 0.55);
+      }
     }
   }
 
@@ -51,23 +124,101 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    padding: 60px 40px 0;
   }
 
   &__divider {
+    width: 75px;
+    height: 18px;
+    background-color: transparent;
+    margin: 50px auto 0;
+    border: none;
+    background: url("../img/icons/icon-divider.png") no-repeat;
   }
 
   &__list {
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    line-height: 44px;
+    font-weight: 400;
+    color: #2e3579;
+    text-align: center;
+    padding: 34px 40px;
   }
 
   &__link {
   }
 
   &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    min-height: 250px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    top: 60px;
+    z-index: 100;
+    padding: 10px;
+    margin: 0 60px;
   }
 
   &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d2d2d2;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+
+    span {
+      font-size: 70px;
+      font-family: "Lusitana", serif;
+      line-height: 0.9;
+      color: $color-accent;
+      transform: translateY(calc(50% + 10px));
+    }
+  }
+
+  &__small-text {
+    display: none;
+    transform: translateY(270%);
+    display: block;
+    font-size: 12px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #d2b069;
   }
 
   &__book {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    transform: translateY(200%);
+    background: url("../img/texture/button_texture.png") center / cover
+      no-repeat;
+    padding: 20px 30px;
+    position: relative;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    z-index: 50;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   }
 }
