@@ -1,0 +1,271 @@
+// pricing
+.page__pricing {
+  padding: 45px 0 45px;
+}
+
+.pricing {
+  background: #f0f0f0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(1 / 3 * 100% - 30px);
+    margin: 0 15px 30px;
+    padding: 40px 40px 120px 40px;
+    @include adaptiv-value("padding-left", 40, 20, 0);
+    @include adaptiv-value("padding-right", 40, 20, 0);
+    position: relative;
+    background: url("../img/texture/texture_1.jpg") left bottom / 100% 120px
+      no-repeat #fff;
+
+    @media (min-width: 1920px) {
+      @include adaptiv-value("padding-left", 40, 20, 1);
+      @include adaptiv-value("padding-right", 40, 20, 1);
+    }
+
+    &:hover {
+      .pricing__divider {
+        background: url("../img/icons/icon-divider-hover.png") no-repeat;
+      }
+
+      .pricing__small-text {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      .pricing__book {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      span {
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      opacity: 0.75;
+      background: #669850;
+    }
+
+    &:nth-of-type(2) {
+      background: url("../img/texture/texture_2.jpg") left bottom / 100% 120px
+        no-repeat #fff;
+
+      .pricing__title {
+        color: #834272;
+      }
+
+      &::after {
+        background: #7f3c6c;
+      }
+
+      .pricing__box {
+        background: url("../img/bg/still-life_2.png") no-repeat bottom right /
+          contain #fff;
+        a:hover {
+          background-color: rgba(88, 39, 74, 0.85);
+        }
+      }
+
+      .pricing__book::after {
+        background: rgba(88, 39, 74, 0.55);
+      }
+    }
+
+    &:nth-of-type(3) {
+      background: url("../img/texture/texture_3.jpg") left bottom / 100% 120px
+        no-repeat #fff;
+
+      .pricing__title {
+        color: #2f6686;
+      }
+
+      &::after {
+        background: #2f6686;
+      }
+
+      .pricing__box {
+        background: url("../img/bg/still-life_1.png") no-repeat bottom right /
+          contain #fff;
+        a:hover {
+          background-color: rgba(30, 69, 91, 0.85);
+        }
+      }
+
+      .pricing__book::after {
+        background: rgba(30, 69, 91, 0.55);
+      }
+    }
+  }
+
+  &__title {
+    font-family: PlayfairDisplay;
+    @include adaptiv-font(45, 15, 1);
+    line-height: 47px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    color: #669850;
+  }
+
+  &__divider {
+    width: 75px;
+    height: 18px;
+    background-color: transparent;
+    margin-top: 50px;
+    border: none;
+    background: url("../img/icons/icon-divider.png") no-repeat;
+  }
+
+  &__list {
+    font-family: Mulish, sans-serif;
+    font-size: 20px;
+    line-height: 44px;
+    font-weight: 400;
+    color: #2e3579;
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    min-height: 250px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    top: 60px;
+    z-index: 100;
+    padding: 10px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d2d2d2;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    background: url("../img/bg/still-life_3.png") no-repeat bottom right /
+      contain #fff;
+
+    span {
+      font-size: 70px;
+      font-family: "Lusitana", serif;
+      line-height: 0.9;
+      color: $color-accent;
+      transform: translateY(calc(50% + 10px));
+    }
+
+    a:hover {
+      background-color: rgba(102, 152, 80, 0.85);
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__small-text {
+    display: none;
+    transform: translateY(270%);
+    display: block;
+    font-size: 12px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #d2b069;
+  }
+
+  &__book {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    transform: translateY(200%);
+    background: url("../img/texture/button_texture.png") center / cover
+      no-repeat rgba(102, 152, 80, 0.2);
+    padding: 20px 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(75, 115, 57, 0.55);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .pricing {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      width: calc(1 / 2 * 100% - 30px);
+      flex-grow: 1;
+
+      .pricing__small-text {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      .pricing__book {
+        display: block;
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+
+      span {
+        transform: translateY(0);
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    &__title {
+      font-size: 45px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing {
+    &__column {
+      width: 100%;
+    }
+
+    &__title {
+      @include adaptiv-font(45, 40, 1);
+    }
+  }
+}
