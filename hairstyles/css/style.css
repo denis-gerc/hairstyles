@@ -1563,7 +1563,11 @@ body._touch .sub-menu__list.open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 -15px;
 }
+
+._no-webp .pricing__column{
+  background: url("../img/texture/texture_1.jpg") left bottom/100% 120px no-repeat #fff; }
 
 .pricing__column {
   display: -webkit-box;
@@ -1573,13 +1577,19 @@ body._touch .sub-menu__list.open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333%;
-          flex: 1 1 33.333%;
-  margin: 0 15px;
-  padding-bottom: 120px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(1 / 3 * 100% - 30px);
+  margin: 0 15px 30px;
+  padding: 40px 40px 120px 40px;
+  padding-left: calc(20px + 20 * ((100vw - 320px) / 1600));
+  padding-right: calc(20px + 20 * ((100vw - 320px) / 1600));
   position: relative;
 }
+
+._no-webp .pricing__column:hover .pricing__divider{
+  background: url("../img/icons/icon-divider-hover.png") no-repeat; }
 
 .pricing__column:hover .pricing__small-text {
   display: block;
@@ -1618,32 +1628,11 @@ body._touch .sub-menu__list.open {
   width: 100%;
   height: 120px;
   opacity: 0.75;
-}
-
-._no-webp .pricing__column:nth-of-type(1){
-  background: url("../img/texture/texture_1.jpg") left bottom/contain no-repeat #fff; }
-
-.pricing__column:nth-of-type(1) {
-  margin-left: 0;
-}
-
-.pricing__column:nth-of-type(1) .pricing__title {
-  color: #669850;
-}
-
-.pricing__column:nth-of-type(1)::after {
   background: #669850;
 }
 
-._no-webp .pricing__column:nth-of-type(1) .pricing__box{
-  background: url("../img/bg/still-life_3.png") no-repeat bottom right/contain #fff; }
-
-.pricing__column:nth-of-type(1) .pricing__book::after {
-  background: rgba(75, 115, 57, 0.55);
-}
-
 ._no-webp .pricing__column:nth-of-type(2){
-  background: url("../img/texture/texture_2.jpg") left bottom/contain no-repeat #fff; }
+  background: url("../img/texture/texture_2.jpg") left bottom/100% 120px no-repeat #fff; }
 
 .pricing__column:nth-of-type(2) .pricing__title {
   color: #834272;
@@ -1656,16 +1645,16 @@ body._touch .sub-menu__list.open {
 ._no-webp .pricing__column:nth-of-type(2) .pricing__box{
   background: url("../img/bg/still-life_2.png") no-repeat bottom right/contain #fff; }
 
+.pricing__column:nth-of-type(2) .pricing__box a:hover {
+  background-color: rgba(88, 39, 74, 0.85);
+}
+
 .pricing__column:nth-of-type(2) .pricing__book::after {
   background: rgba(88, 39, 74, 0.55);
 }
 
 ._no-webp .pricing__column:nth-of-type(3){
-  background: url("../img/texture/texture_3.jpg") left bottom/contain no-repeat #fff; }
-
-.pricing__column:nth-of-type(3) {
-  margin-right: 0;
-}
+  background: url("../img/texture/texture_3.jpg") left bottom/100% 120px no-repeat #fff; }
 
 .pricing__column:nth-of-type(3) .pricing__title {
   color: #2f6686;
@@ -1678,6 +1667,10 @@ body._touch .sub-menu__list.open {
 ._no-webp .pricing__column:nth-of-type(3) .pricing__box{
   background: url("../img/bg/still-life_1.png") no-repeat bottom right/contain #fff; }
 
+.pricing__column:nth-of-type(3) .pricing__box a:hover {
+  background-color: rgba(30, 69, 91, 0.85);
+}
+
 .pricing__column:nth-of-type(3) .pricing__book::after {
   background: rgba(30, 69, 91, 0.55);
 }
@@ -1689,7 +1682,8 @@ body._touch .sub-menu__list.open {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  padding: 60px 40px 0;
+  padding-top: 20px;
+  color: #669850;
 }
 
 ._no-webp .pricing__divider{
@@ -1699,7 +1693,7 @@ body._touch .sub-menu__list.open {
   width: 75px;
   height: 18px;
   background-color: transparent;
-  margin: 50px auto 0;
+  margin-top: 50px;
   border: none;
 }
 
@@ -1710,7 +1704,7 @@ body._touch .sub-menu__list.open {
   font-weight: 400;
   color: #2e3579;
   text-align: center;
-  padding: 34px 40px;
+  padding-top: 35px;
 }
 
 .pricing__price {
@@ -1736,8 +1730,10 @@ body._touch .sub-menu__list.open {
   top: 60px;
   z-index: 100;
   padding: 10px;
-  margin: 0 60px;
 }
+
+._no-webp .pricing__box{
+  background: url("../img/bg/still-life_3.png") no-repeat bottom right/contain #fff; }
 
 .pricing__box {
   display: -webkit-box;
@@ -1772,6 +1768,12 @@ body._touch .sub-menu__list.open {
           transform: translateY(calc(50% + 10px));
 }
 
+.pricing__box a:hover {
+  background-color: rgba(102, 152, 80, 0.85);
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
 .pricing__small-text {
   display: none;
   -webkit-transform: translateY(270%);
@@ -1787,7 +1789,7 @@ body._touch .sub-menu__list.open {
 }
 
 ._no-webp .pricing__book{
-  background: url("../img/texture/button_texture.png") center/cover no-repeat; }
+  background: url("../img/texture/button_texture.png") center/cover no-repeat rgba(102, 152, 80, 0.2); }
 
 .pricing__book {
   font-size: 14px;
@@ -1800,9 +1802,6 @@ body._touch .sub-menu__list.open {
           transform: translateY(200%);
   padding: 20px 30px;
   position: relative;
-  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
-  z-index: 50;
 }
 
 .pricing__book::after {
@@ -1813,6 +1812,7 @@ body._touch .sub-menu__list.open {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background: rgba(75, 115, 57, 0.55);
 }
 
 /**
@@ -2892,6 +2892,11 @@ p {
     padding-right: 90px;
     padding-left: 60px;
   }
+
+  .pricing__column {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -2905,6 +2910,10 @@ p {
 
   .services__title {
     font-size: calc(30px + 5 * ((100vw - 320px) / 850));
+  }
+
+  .pricing__title {
+    font-size: calc(15px + 30 * ((100vw - 320px) / 850));
   }
 }
 
@@ -3183,6 +3192,51 @@ p {
   .text-slider__text:after {
     display: none;
   }
+
+  .pricing__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .pricing__column {
+    width: calc(1 / 2 * 100% - 30px);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+  .pricing__column .pricing__small-text {
+    display: block;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .pricing__column .pricing__book {
+    display: block;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .pricing__column span {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .pricing__title {
+    font-size: 45px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -3204,6 +3258,20 @@ p {
   .services__item--left,
   .services__item--center {
     padding: 0;
+  }
+
+  .pricing__column {
+    width: 100%;
+  }
+
+  .pricing__title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 1170px) {
+  .pricing__title {
+    font-size: calc(40px + 5 * ((100vw - 320px) / 850));
   }
 }
 
@@ -3262,6 +3330,14 @@ p {
   .reviews__row {
     padding-left: calc(10px + 50 * ((100vw - 320px) / 850));
   }
+
+  .pricing__column {
+    padding-left: calc(20px + 20 * ((100vw - 320px) / 850));
+  }
+
+  .pricing__column {
+    padding-right: calc(20px + 20 * ((100vw - 320px) / 850));
+  }
 }
 
 ._webp .sub-menu__list li:last-child{ background: url(../img/icons/menu-flowers-bg.webp) center bottom/100% no-repeat white; }
@@ -3282,18 +3358,20 @@ p {
 
 ._webp .reviews__row{ background: url(../img/bg/reviews_bg.webp) right top/contain no-repeat #fff; }
 
-._webp .pricing__column:nth-of-type(1){ background: url(../img/texture/texture_1.webp) left bottom/contain no-repeat #fff; }
+._webp .pricing__column{ background: url(../img/texture/texture_1.webp) left bottom/100% 120px no-repeat #fff; }
 
-._webp .pricing__column:nth-of-type(1) .pricing__box{ background: url(../img/bg/still-life_3.webp) no-repeat bottom right/contain #fff; }
+._webp .pricing__column:hover .pricing__divider{ background: url(../img/icons/icon-divider-hover.webp) no-repeat; }
 
-._webp .pricing__column:nth-of-type(2){ background: url(../img/texture/texture_2.webp) left bottom/contain no-repeat #fff; }
+._webp .pricing__column:nth-of-type(2){ background: url(../img/texture/texture_2.webp) left bottom/100% 120px no-repeat #fff; }
 
 ._webp .pricing__column:nth-of-type(2) .pricing__box{ background: url(../img/bg/still-life_2.webp) no-repeat bottom right/contain #fff; }
 
-._webp .pricing__column:nth-of-type(3){ background: url(../img/texture/texture_3.webp) left bottom/contain no-repeat #fff; }
+._webp .pricing__column:nth-of-type(3){ background: url(../img/texture/texture_3.webp) left bottom/100% 120px no-repeat #fff; }
 
 ._webp .pricing__column:nth-of-type(3) .pricing__box{ background: url(../img/bg/still-life_1.webp) no-repeat bottom right/contain #fff; }
 
 ._webp .pricing__divider{ background: url(../img/icons/icon-divider.webp) no-repeat; }
 
-._webp .pricing__book{ background: url(../img/texture/button_texture.webp) center/cover no-repeat; }
+._webp .pricing__box{ background: url(../img/bg/still-life_3.webp) no-repeat bottom right/contain #fff; }
+
+._webp .pricing__book{ background: url(../img/texture/button_texture.webp) center/cover no-repeat rgba(102, 152, 80, 0.2); }
