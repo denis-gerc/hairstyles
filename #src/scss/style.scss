@@ -6,6 +6,7 @@
 
 //<Подключаем шрифты>================================================
 //&display=swap&subset=cyrillic-ext
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic&display=swap&subset=cyrillic-ext);
 @import "fonts";
 //</Подключаем шрифты>===============================================
 
@@ -15,6 +16,7 @@
 
 //<Шрифт по умолчанию>===============================================
 $fontFamily: "Mulish", sans-serif;
+$fontTitle: "Playfair Display", serif;
 //</Шрифт по умолчанию>==============================================
 
 //</ШРИФТЫ>==========================================================
@@ -97,10 +99,9 @@ body {
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================
 
-
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СКРИПТОВ>===============================
 //@import "datepicker";
-//@import "lightgallery";
+@import "lightgallery";
 //@import "pagging";
 //@import "popup";
 @import "swiper";
@@ -126,7 +127,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: $fontTitle;
   font-weight: 600;
 }
 
