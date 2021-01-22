@@ -24,6 +24,7 @@
     position: relative;
     background: url("../img/texture/texture_1.jpg") left bottom / 100% 120px
       no-repeat #fff;
+    box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
 
     @media (min-width: 1920px) {
       @include adaptiv-value("padding-left", 40, 20, 1);

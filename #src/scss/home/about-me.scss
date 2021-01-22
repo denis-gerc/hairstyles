@@ -1,135 +1,132 @@
 // about-me
 .page__about-me {
-	padding-bottom: 45px;
+  padding-bottom: 45px;
 }
 
 .about-me {
-	background: #f0f0f0;
+  background: #f0f0f0;
 
-	&__row {
-		display: flex;
-		position: relative;
-		background: url("../img/bg/side_bg_1.jpg") left top / contain no-repeat white;
-		@include adaptiv-value("padding", 60, 30, 0);
-		z-index: 2;
+  &__row {
+    display: flex;
+    position: relative;
+    background: url("../img/bg/side_bg_1.jpg") left top / contain no-repeat
+      white;
+    @include adaptiv-value("padding", 60, 30, 0);
+    z-index: 2;
+    box-shadow: 2px 0 30px rgba(0, 0, 0, 0.1);
 
-		@media (min-width: 1920px) {
-			& {
-				@include adaptiv-value("padding", 60, 30, 1);
-			}
-		}
-	}
+    @media (min-width: 1920px) {
+      & {
+        @include adaptiv-value("padding", 60, 30, 1);
+      }
+    }
+  }
 
-	&__column {
-		flex: 0 1 48.6%;
-	}
+  &__column {
+    flex: 0 1 48.6%;
+  }
 
-	&__column--b {
-		flex: 0 1 51%;
-	}
+  &__column--b {
+    flex: 0 1 51%;
+  }
 
-	&__media {
-		height: 100%;
-		width: 100%;
-	}
+  &__media {
+    height: 100%;
+    width: 100%;
+  }
 
-	&__img {
-		box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
-		border: 30px solid #f9f9f9;
-	}
+  &__img {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+    border: 30px solid #f9f9f9;
+  }
 
-	&__content {
-		padding: 0 0 0 60px;
-	}
+  &__content {
+    padding: 0 0 0 60px;
+  }
 
-	&__title-h2 {
-		@include adaptiv-font(70, 40, 1);
-		line-height: 60px;
-		font-weight: 700;
-		text-transform: uppercase;
-		color: #8cb877;
-		// padding-bottom: 60px;
-		@include adaptiv-value("padding-bottom", 60, 20, 0);
-		@include adaptiv-value("padding-top", 30, 10, 0);
+  &__title-h2 {
+    @include adaptiv-font(70, 40, 1);
+    line-height: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8cb877;
+    // padding-bottom: 60px;
+    @include adaptiv-value("padding-bottom", 60, 20, 0);
+    @include adaptiv-value("padding-top", 30, 10, 0);
 
-		@media (min-width: 1920px) {
-			& {
-				@include adaptiv-value("padding-bottom", 60, 20, 1);
-				@include adaptiv-value("padding-top", 30, 10, 1);
-			}
-		}
-	}
+    @media (min-width: 1920px) {
+      & {
+        @include adaptiv-value("padding-bottom", 60, 20, 1);
+        @include adaptiv-value("padding-top", 30, 10, 1);
+      }
+    }
+  }
 
-	&__intro {
-		font-family: Mulish, sans-serif;
-		font-size: 24px;
-		line-height: 27px;
-		font-weight: 300;
-		font-style: italic;
-		color: #232323;
-		position: relative;
-		padding: 20px 0;
-		margin-bottom: 50px;
+  &__intro {
+    font-family: Mulish, sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 300;
+    font-style: italic;
+    color: #232323;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 50px;
 
-		&:before {
-			@include hr-dots($top: 0, $right: 0, $left: 0, $height: 4px);
-		}
+    &:before {
+      @include hr-dots($top: 0, $right: 0, $left: 0, $height: 4px);
+    }
 
-		&:after {
-			@include hr-dots($top: 100%, $right: 0, $left: 0, $height: 4px);
-		}
-	}
+    &:after {
+      @include hr-dots($top: 100%, $right: 0, $left: 0, $height: 4px);
+    }
+  }
 
-	&__text {
-		font-size: 18px;
-		line-height: 27px;
-		font-weight: 300;
-		color: #787878;
-		padding-bottom: 25px;
-	}
+  &__text {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    color: #787878;
+    padding-bottom: 25px;
+  }
 
-	&__title-h4 {
-		color: $color-accent;
-		font-weight: 400;
-		@include adaptiv-font(45, 35, 1);
-		padding-top: 25px;
-	}
+  &__title-h4 {
+    color: $color-accent;
+    font-weight: 400;
+    @include adaptiv-font(45, 35, 1);
+    padding-top: 25px;
+  }
 
-	&__subtitle {
-		font-size: 14px;
-		line-height: 44px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #499cbb;
-	}
-
+  &__subtitle {
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #499cbb;
+  }
 }
 
 @media (max-width: 1023px) {
+  .about-me {
+    &__row {
+      flex-direction: column;
+      padding: 0;
+    }
 
-	.about-me {
+    &__media {
+      padding: 125% 0 0 0;
+      width: 90%;
+      margin: 50px auto -50px;
+    }
 
-		&__row {
-			flex-direction: column;
-			padding: 0;
-		}
+    &__content {
+      background-color: white;
+      padding: 100px 30px 30px;
+    }
 
-		&__media {
-			padding: 125% 0 0 0;
-			width: 90%;
-			margin: 50px auto -50px;
-		}
-
-		&__content {
-			background-color: white;
-			padding: 100px 30px 30px;
-		}
-
-		&__img {
-			border: 20px solid #f9f9f9;
-		}
-
-	}
-
+    &__img {
+      border: 20px solid #f9f9f9;
+    }
+  }
 }
