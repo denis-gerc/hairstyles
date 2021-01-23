@@ -1,5 +1,46 @@
-footer{}
-//====================================================================================================
+.footer {
 
-//====================================================================================================
+	&__row {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		line-height: 28px;
+	}
 
+	&__small-text {
+		font-family: Mulish, sans-serif;
+		font-size: 12px;
+		//line-height: 50px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #787878;
+	}
+
+	.logo {
+		padding: 22px 0 22px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer {
+
+		&__row {
+			flex-direction: column;
+			height: auto;
+
+
+			&__small-text{
+				order: 0;
+				padding-bottom: 15px;
+			}
+
+			.logo {
+				order: -1;
+			}
+		}
+
+	}
+
+
+}
