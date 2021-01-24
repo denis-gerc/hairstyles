@@ -384,7 +384,7 @@ body.ie {
 	top: 18px !important;
 }
 
-//========================================================================================================================================================
+//============================================================================
 ._custom-scroll {
 	position: fixed;
 	right: 0;
@@ -403,5 +403,46 @@ body.ie {
 	}
 }
 
-//</ГОТОВЫЕ КЛАССЫ>====================================================================================================
+//Разделитель точки===============================================================
+%dots-big {
+	content: "";
+	margin: auto;
+	height: 4px;
+	background-image: -webkit-repeating-radial-gradient(center center, #eaeaea, #eaeaea 2px, transparent 2px, transparent 100%);
+	background-image: -o-repeating-radial-gradient(center center, #eaeaea, #eaeaea 2px, transparent 2px, transparent 100%);
+	background-image: repeating-radial-gradient(center center, #eaeaea, #eaeaea 2px, transparent 2px, transparent 100%);
+	background-size: 16px 16px;
+	background-position: center;
+}
+
+%dots-small {
+	content: "";
+	margin: auto;
+	height: 2px;
+	background-image: -webkit-repeating-radial-gradient(center center, #eaeaea, #eaeaea 1px, transparent 2px, transparent 100%);
+	background-image: -o-repeating-radial-gradient(center center, #eaeaea, #eaeaea 1px, transparent 2px, transparent 100%);
+	background-image: repeating-radial-gradient(center center, #eaeaea, #eaeaea 1px, transparent 1px, transparent 100%);
+	background-size: 8px 8px;
+	background-position: center;
+}
+
+// title-h3 //==========================================
+%title-h3 {
+	font-family: $fontTitle;
+	font-size: 45px;
+	font-weight: 700;
+	color: white;
+}
+// text-p //===========================================
+%text-p {
+	font-family: $fontFamily;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: #232323;
+	padding: 0 0 15px;
+}
+
+//</ГОТОВЫЕ КЛАССЫ>================================================================
 

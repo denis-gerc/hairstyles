@@ -3,3 +3,4 @@
 @@include('libs/jquery.event.move.js', {})
 @@include('libs/jquery.twentytwenty.js', {})
 @@include('libs/lightgallery.min.js', {})
+@@include('libs/inputmask.min.js', {})

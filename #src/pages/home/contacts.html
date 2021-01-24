@@ -1,0 +1,59 @@
+<section class="contacts page__contacts">
+  <div class="container">
+    <div class="contacts__row">
+      <h3 class="title-h3">London, <span>United Kingdom</span></h3>
+      <hr class="dots dots--big">
+      <p class="text-p text-p--big">Address</p>
+      <p class="text-p text-p--light">Shepherd's Bush Sinclair Road, 142 <br> flat D, W14 0NL</p>
+      <p class="text-p text-p--big">Phone number</p>
+      <p class="text-p text-p-phone">+ 44 (20) 7946 0666</p>
+      <form action="#" id="form" class="form contacts__form">
+        <div class="form__line">
+          <div class="form__input">
+            <label for="name" class="form__label">Name</label>
+            <input id="name"
+                   autocomplete="off"
+                   type="text"
+                   name="name"
+                   data-error="Error"
+                   data-value="Name"
+                   class="input _req">
+          </div>
+          <div class="form__input">
+            <label for="email" class="form__label">Email</label>
+            <input id="email"
+                   autocomplete="off"
+                   type="email"
+                   name="email"
+                   data-error="Error"
+                   data-value="Email"
+                   class="input _req _email">
+          </div>
+          <div class="form__input">
+            <label for="phone" class="form__label">Phone</label>
+            <input id="phone"
+                   autocomplete="off"
+                   type="tel"
+                   name="phone"
+                   data-error="Error"
+                   data-value="Phone"
+                   class="input _req _phone">
+          </div>
+        </div>
+
+        <div class="form__text">
+          <label for="message" class="form__label hidden">Message</label>
+          <textarea id="message"
+                    autocomplete="off"
+                    name="message"
+                    data-error="Error"
+                    data-value="Message"
+                    class="input"></textarea>
+        </div>
+
+        <button class="form__btn btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+
+</section>

@@ -1,5 +1,5 @@
 .footer {
-
+	background: white;
 	&__row {
 		display: flex;
 		justify-content: space-around;
@@ -10,7 +10,6 @@
 	&__small-text {
 		font-family: Mulish, sans-serif;
 		font-size: 12px;
-		//line-height: 50px;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -30,7 +29,7 @@
 			height: auto;
 
 
-			&__small-text{
+			&__small-text {
 				order: 0;
 				padding-bottom: 15px;
 			}
