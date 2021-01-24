@@ -31,7 +31,7 @@
     font-weight: 300;
     color: #232323;
     text-align: center;
-    padding-bottom: 75px;
+		@include adaptiv-value('padding-bottom', 75, 35,1);
     max-width: 72%;
     margin: auto;
   }

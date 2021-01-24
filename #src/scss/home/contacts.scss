@@ -8,17 +8,54 @@
 	&__row {
 		background: #d2b069;
 		@include adaptiv-value("padding", 60, 20, 1);
+		@include adaptiv-value("padding-top", 80, 20, 1);
 		@include adaptiv-value("padding-bottom", 90, 40, 1);
 		box-shadow: 2px 0 30px rgba(0, 0, 0, 0.2);
 	}
 
-	&__phone {
-		font-family: Mulish, sans-serif;
-		font-size: 35px;
+	.title-h3 {
+		@extend %title-h3;
+		@include adaptiv-font(45, 30, 1);
+		//padding: 21px 0 12px;
+		//@include adaptiv-value('line-height', 88, 40, 1);
+		position: relative;
+		line-height: 50px;
+
+		span {
+			color: #fffbc0;
+		}
+	}
+
+	.dots--big {
+		@extend %dots-big;
+		margin: 54px auto;
+		@include adaptiv-value('margin-top', 54, 20, 1);
+		@include adaptiv-value('margin-bottom', 54, 20, 1);
+		width: 40%;
+	}
+
+	.text-p--light {
+		@extend %text-p;
+		color: white;
+		line-height: 1.2;
+		padding-bottom: 15px;
+		letter-spacing: .45px;
+	}
+
+	.text-p--big {
+		@extend %text-p;
+		text-transform: uppercase;
+		color: #fffbc0;
+		font-weight: 700;
+		padding-bottom: 10px;
+	}
+
+	.text-p-phone {
+		@extend %text-p;
 		@include adaptiv-font(35, 23, 1);
+		@include adaptiv-value('padding-bottom', 80, 40, 1);
 		text-transform: uppercase;
 		color: white;
-		@include adaptiv-value('padding-bottom', 80, 40, 1);
 		letter-spacing: .7px;
 	}
 
@@ -29,50 +66,9 @@
 	}
 }
 
-.title-h3 {
-	@extend %title-h3;
-	@include adaptiv-font(45, 30, 1);
-	@include adaptiv-value('line-height', 90, 40, 1);
-	position: relative;
-
-	span {
-		color: #fffbc0;
-	}
-
-}
-
-.text-p--light {
-	@extend %text-p;
-	color: white;
-	padding: 0 0 30px;
-}
-
-.text-p--big {
-	@extend %text-p;
-	text-transform: uppercase;
-	color: #fffbc0;
-	font-weight: 700;
-}
-
-.text-p-phone {
-	@extend %text-p;
-	@include adaptiv-font(35, 23, 1);
-	@include adaptiv-value('padding-bottom', 80, 40, 1);
-	text-transform: uppercase;
-	color: white;
-	letter-spacing: .7px;
-}
 
 .page__contacts {
 	padding: 45px 0 90px;
-}
-
-.dots--big {
-	@extend %dots-big;
-	margin: 40px auto;
-	@include adaptiv-value('margin-top', 40, 20, 1);
-	@include adaptiv-value('margin-bottom', 40, 20, 1);
-	width: 40%;
 }
 
 .form {
@@ -133,7 +129,7 @@
 		text-transform: uppercase;
 		letter-spacing: .05em;
 		color: white;
-		padding: 17px 30px;
+		padding: 16px 31px;
 		position: relative;
 		background: url("../img/texture/button_texture.jpg") center/cover no-repeat;
 		z-index: 1;
