@@ -30,6 +30,23 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+//<ПЕРЕМЕННЫЕ ЦВЕТА===============================>
+:root {
+  --color-black: #000000;
+  --color-dark: #232323;
+  --color-grey: #787878;
+  --color-light-grey: #dfdfdf;
+  --color-blue: #2f6686;
+  --color-dark-blue: #2f367a;
+  --color-light-blue-1: #3394b6;
+  --color-light-blue-2: #499cbb;
+  --color-white: #ffffff;
+  --color-light-white: #f0f0f0;
+  --color-accent: #d02954;
+  --color-green: #8cb877;
+  --color-purple: #834272;
+  --color-gold: #d2b069;
+}
 $color-accent: #d02954;
 //</ПЕРЕМЕННЫЕ>======================================================
 
@@ -37,7 +54,7 @@ $color-accent: #d02954;
 @import "null";
 
 body {
-  color: #f0f0f0;
+  color: var(--color-dark);
   font-size: 14px;
 
   &._lock {

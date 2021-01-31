@@ -1,48 +1,46 @@
 <header class="header">
 	<div class="container">
 		<div class="header__row">
-			<nav class="header__menu menu">
-
-				<div class="menu__body">
-
-					<div class="menu__icon icon-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-
-					<ul class="menu__list">
-						<li><a href="#" class="menu__link">Home</a></li>
-						<li><a href="#" class="menu__link">Pages</a>
-							<span class="menu__arrow arrow"></span>
-							<!-- sub-menu -->
-							<ul class="sub-menu__list">
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">About</a>
-								</li>
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">404</a>
-								</li>
-								<li class="sub-menu__item">
-									<a href="#" class="sub-menu__link">Faq</a>
-								</li>
-							</ul>
-							<!-- end sub-menu -->
-						</li>
-						<li><a href="#" class="menu__link">Services</a></li>
-						<li class="logo"><a href="#" class="menu__link"></a></li>
-						<li><a href="#" class="menu__link">Portfolio</a></li>
-						<li><a href="#" class="menu__link">Blog</a></li>
-						<li><a href="#" class="menu__link">Contacts</a></li>
-					</ul>
-
-					<div class="header__logo">
-						<a href="/"><img class="logo-img" src="img/logo/logo-white.png" alt="logo"></a>
-					</div>
-
-				</div>
+			<nav class="nav header__nav header__nav--left">
+				<ul class="nav__list">
+					<li class="nav__item"><a class="nav__link nav__link--current">Home</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Pages</a>
+						<span class="menu__arrow arrow"></span>
+						<!-- sub-menu -->
+						<ul class="sub-menu__list">
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">About</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">404</a>
+							</li>
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Faq</a>
+							</li>
+						</ul>
+						<!-- end sub-menu -->
+					</li>
+					<li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+				</ul>
 			</nav>
 
+			<a class="logo header__logo" href="#" aria-label="logo">
+				<img src="img/logo/logo-white.png" alt="logo">
+			</a>
+
+			<nav class="nav header__nav header__nav--right">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+				</ul>
+			</nav>
+
+			<div class="nav__icon icon-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
 	</div>
 </header>
